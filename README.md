@@ -13,6 +13,12 @@ sudo docker build --no-cache -t="nzbget-with-tls13" .
 ```
 
 ## Run
+Default, easy way:
+```
+sudo docker run  -p 563:6791 --name mynzbget nzbget-with-tls13
+```
+Or if you want to specify special things:
+
 ```
 sudo docker run  -p 6791:6791 --name mynzbget nzbget-with-tls13    nzbget --nserv -d /my_content/ -s /nzbget-example.com.cert /nzbget-example.com.key
 ```
