@@ -13,7 +13,7 @@ sudo docker build --no-cache -t="nzbget-with-tls13" .
 ```
 
 ## Run
-Default, easy way:
+Default, easy way (with NNTPS server on NTTPS port 563):
 ```
 sudo docker run  -p 563:6791 --name mynzbget nzbget-with-tls13
 ```
