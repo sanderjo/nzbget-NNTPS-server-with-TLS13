@@ -9,8 +9,9 @@ RUN openssl genrsa -out nzbget-example.com.key 2048
 RUN test -f /root/.rnd || touch /root/.rnd # See bug https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=898470
 RUN cd / && openssl req -new -x509 -key nzbget-example.com.key -out nzbget-example.com.cert -days 3650 -subj /CN=nzbget-example.com
 RUN mkdir /my_content
-
-
 RUN echo 'Hi, I am in your container'
+
+# Run this (as default) when the container starts
+CMD nzbget --nserv -d /my_content/ -s /nzbget-example.com.cert /nzbget-example.com.key
 
 EXPOSE 7891
