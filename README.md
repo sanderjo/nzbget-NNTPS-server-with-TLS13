@@ -13,6 +13,7 @@ Run
 ```
 sudo docker run  -p 6791:6791 --name mynzbget nzbget-with-tls13    nzbget --nserv -d /my_content/ -s /nzbget-example.com.cert /nzbget-example.com.key
 ```
+... with example result:
 
 ```
 $ sudo docker run  -p 6791:6791 --name mynzbget nzbget-with-tls13    nzbget --nserv -d /my_content/ -s /nzbget-example.com.cert /nzbget-example.com.key
@@ -24,7 +25,7 @@ $ sudo docker run  -p 6791:6791 --name mynzbget nzbget-with-tls13    nzbget --ns
 [DETAIL] [1] Serving: <test@home>
 
 ```
-The great testssl.sh will report:
+The great testssl.sh (see https://github.com/drwetter/testssl.sh )will report:
 ```
  SSLv2      not offered (OK)
  SSLv3      not offered (OK)
