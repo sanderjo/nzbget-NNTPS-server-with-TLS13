@@ -4,7 +4,10 @@ For testing TLS1.3 of a NNTP client (like SABnzbd or NZBget): a nzbget-nserv bas
 
 The NNTPS server has a self-signed certificate, so turn off certificate checking in your client
 
-## Build (in the directory containing the Dockerfile):
+## Build
+
+Build in the directory containing the Dockerfile
+
 ```
 sudo docker build --no-cache -t="nzbget-with-tls13" .
 ```
