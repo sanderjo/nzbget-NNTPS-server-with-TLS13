@@ -9,7 +9,7 @@ Build (in the directory containing the Dockerfile):
 sudo docker build --no-cache -t="nzbget-with-tls13" .
 ```
 
-Run:
+Run
 ```
 sudo docker run  -p 6791:6791 --name mynzbget nzbget-with-tls13    nzbget --nserv -d /my_content/ -s /nzbget-example.com.cert /nzbget-example.com.key
 ```
@@ -23,5 +23,20 @@ $ sudo docker run  -p 6791:6791 --name mynzbget nzbget-with-tls13    nzbget --ns
 [DETAIL] [1] Received: ARTICLE <test@home>
 [DETAIL] [1] Serving: <test@home>
 
-[ERROR] Could not read from TLS-Socket: Connection closed by remote host
 ```
+The great testssl.sh will report:
+```
+ SSLv2      not offered (OK)
+ SSLv3      not offered (OK)
+ TLS 1      not offered
+ TLS 1.1    not offered
+ TLS 1.2    offered (OK)
+ TLS 1.3    offered (OK): draft 26
+```
+
+
+Stop the server:
+```
+sudo docker kill mynzbget
+```
+
