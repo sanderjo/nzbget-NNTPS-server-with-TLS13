@@ -44,9 +44,9 @@ A SABnzbd client, running with python 2.7.15 and openssl 1.1.1, will show:
 
 2018-05-14 20:07:24,018::INFO::[newswrapper:228] -1@192.168.1.245: Connected using TLSv1.3 (TLS_AES_256_GCM_SHA384)
 ```
-So: a TLS 1.3 connection from SABnzbd to NZBget-nserver.
+So: a TLS 1.3 connection from SABnzbd to NZBget-nserv.
 
-The great testssl.sh (see https://github.com/drwetter/testssl.sh )will report:
+The great testssl.sh (see https://github.com/drwetter/testssl.sh) will report:
 ```
  SSLv2      not offered (OK)
  SSLv3      not offered (OK)
