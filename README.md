@@ -1,4 +1,4 @@
-# nzbget-NNTPS-server-with-TLS13
+# Docker image with test NNTPS server with TLS 1.3, based on NZBget-nserv
 
 For testing TLS1.3 of a NNTP client (like SABnzbd or NZBget), this is a docker image with a nzbget-nserv based NNTPS server with TLS1.3 (and TLS1.2, but no lower protocols).
 
